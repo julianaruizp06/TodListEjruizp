@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==== VARIABLES ==== */
+:root {
+  --blanco: #fafafb;
+  --purpura: #2c7b90;
+  --text: #E0CA3C;
+  --azul: #FFE17D;
+  --verde: #2c7b90;
+  --negro: #000000;
+  --text: #00487c;
+}
+
+/* ==== ESTILOS GENERALES ==== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  font-family: 'Prompt', sans-serif; /* Fuente base ajustada */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ==== PERFIL ==== */
+.perfil {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centra verticalmente la imagen y el texto */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.perfil-img {
+  width: 100px; /* Tamaño de la imagen */
+  height: 100px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.perfil-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil h1, .perfil h3, .perfil span {
+  color: var(--negro);
+}
+
+#fecha {
+  color: var(--negro);
+  padding: 10px 0;
+}
+
+/* ==== AGREGAR TAREA ==== */
+#input {
+  height: 40px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--verde);
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.agregar-tarea {
+  height: 40px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.agregar-tarea i {
+  font-size: 30px;
+  color: var(--text);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.agregar-tarea i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.agregar-tarea input::placeholder {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* ==== SECCION TAREA ==== */
+.seccion-tarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.seccion-tarea h3 {
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.seccion-tarea ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.seccion-tarea li {
+  display: flex;
+  background: var(--text);
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-tarea i {
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+.seccion-tarea i:hover {
+  color: var(--blanco);
+  cursor: pointer;
+}
+
+.seccion-tarea li p {
+  font-size: 1.2rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: var(--blanco);
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+}
