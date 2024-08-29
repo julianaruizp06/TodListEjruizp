@@ -11,7 +11,7 @@
   --text: #E0CA3C;
   --azul: #FFE17D;
   --verde: #2c7b90;
-  --negro: #000000;
+  --negro: #ffffff;
   --text: #00487c;
 }
 
@@ -26,7 +26,7 @@ html, body {
 body {
   position: relative;
   height: 100vh;
-  font-family: 'Prompt', sans-serif; /* Fuente base ajustada */
+  
 }
 
 body::before {
@@ -36,7 +36,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../assets/background.jpg');
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,12 +49,12 @@ body::before {
 .container {
   max-width: 800px;
   width: 100%;
-  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  
 }
 
 /* ==== PERFIL ==== */
@@ -64,6 +64,11 @@ body::before {
   align-items: center; /* Centra verticalmente la imagen y el texto */
   padding: 10px;
   margin-bottom: 20px;
+  color:var(--text);
+  background-color:6c6f7d;
+  box-shadow: 2px 2px 18px 3px rgba(0,0,0,1);
+  -webkit-box-shadow: 2px 2px 18px 3px rgba(0,0,0,1);
+  -moz-box-shadow: 2px 2px 18px 3px rgba(0,0,0,1);
 }
 
 .perfil-img {
@@ -78,12 +83,8 @@ body::before {
   flex-direction: column;
 }
 
-.perfil h1, .perfil h3, .perfil span {
-  color: var(--negro);
-}
-
 #fecha {
-  color: var(--negro);
+  color: var(--text);
   padding: 10px 0;
 }
 
@@ -173,4 +174,10 @@ body::before {
 .btn {
   width: 30px;
   height: 30px;
+}
+
+.spanText{
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
